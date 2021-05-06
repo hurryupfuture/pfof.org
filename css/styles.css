@@ -1,0 +1,338 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Arcade";
+  src: url("../assets/arcade_n-webfont.woff2") format("woff2"), url("../assets/arcade_n-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Karmatic Arcade";
+  src: url("../assets/ka-webfont.woff2") format("woff2"), url("../assets/ka-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.charles-schwab {
+  color: #04a0de;
+}
+
+.e-trade {
+  color: #5627d8;
+}
+
+.fidelity {
+  color: #568200;
+}
+
+.interactive-brokers {
+  color: #da1322;
+}
+
+.robinhood {
+  color: #5ac33a;
+}
+
+.td-ameritrade {
+  color: #40a829;
+}
+
+nav {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 25px 0;
+}
+nav #player-1, nav #player-2 {
+  position: absolute;
+  padding: 5px;
+  font-size: 78%;
+  color: #999;
+}
+nav #player-1.active, nav #player-1:hover, nav #player-2.active, nav #player-2:hover {
+  background: magenta;
+  color: #fff;
+}
+nav #player-1 {
+  left: 25px;
+}
+nav #player-2 {
+  text-align: right;
+  right: 25px;
+}
+nav #insert-coin {
+  position: absolute;
+  top: 2px;
+  left: 43%;
+  font-size: 120%;
+  animation: blinky 2s infinite;
+}
+@keyframes blinky {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+header {
+  margin: 100px 0 0 0;
+  font-family: "Karmatic Arcade";
+}
+header h1 {
+  margin-bottom: 35px;
+  color: yellow;
+  font-size: 600%;
+}
+header h1 .p1 {
+  color: red;
+}
+header h1 .p2 {
+  color: orange;
+}
+header h1 .p3 {
+  color: green;
+}
+header h1 .p4 {
+  color: blue;
+}
+header h2 {
+  margin-bottom: 60px;
+  color: magenta;
+  font-size: 200%;
+}
+
+@media (max-width: 812px) {
+  header {
+    margin: 100px 0 0 0;
+  }
+  header h1 {
+    margin-bottom: 30px;
+    font-size: 360%;
+  }
+  header h2 {
+    margin-bottom: 40px;
+    font-size: 160%;
+  }
+}
+.leaderboard {
+  margin-bottom: 40px;
+}
+.leaderboard .winner {
+  margin: 0 auto 50px auto;
+  font-size: 100%;
+}
+.leaderboard .winner h3 {
+  margin-bottom: 25px;
+  font-family: "Karmatic Arcade";
+  font-size: 300%;
+  line-height: 140%;
+}
+.leaderboard .winner p {
+  width: 40%;
+  margin: 0 auto 20px auto;
+  color: #fff;
+  line-height: 140%;
+}
+.leaderboard table {
+  width: 100%;
+  margin: 0 auto 35px auto;
+  font-size: 215%;
+}
+.leaderboard table#retail-brokers {
+  display: table;
+}
+.leaderboard table#retail-brokers-ex-exchanges {
+  display: table;
+}
+.leaderboard table#market-makers {
+  display: table;
+  color: #fff;
+}
+.leaderboard table thead {
+  color: magenta;
+}
+.leaderboard table thead tr {
+  height: 50px;
+}
+.leaderboard table thead tr th:first-child {
+  width: 15%;
+  text-align: center;
+}
+.leaderboard table thead tr th:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+.leaderboard table thead tr th:last-child {
+  width: 35%;
+  text-align: right;
+}
+.leaderboard table tbody tr {
+  height: 36px;
+}
+.leaderboard table tbody tr td:first-child {
+  text-align: center;
+  color: magenta;
+}
+.leaderboard table tbody tr td:nth-child(2) {
+  text-align: left;
+}
+.leaderboard table tbody tr td:last-child {
+  text-align: right;
+}
+.leaderboard #exclude-exchanges {
+  margin: 0 auto 25px auto;
+  font-size: 110%;
+  line-height: 140%;
+}
+.leaderboard .details {
+  width: 50%;
+  margin: 0 auto 25px auto;
+  color: #999;
+  font-size: 90%;
+  line-height: 140%;
+}
+
+@media (max-width: 812px) {
+  .leaderboard {
+    margin-bottom: 30px;
+  }
+  .leaderboard .winner {
+    margin: 0 auto 25px auto;
+    font-size: 100%;
+  }
+  .leaderboard .winner h3 {
+    margin-bottom: 25px;
+    font-size: 260%;
+    line-height: 140%;
+  }
+  .leaderboard .winner p {
+    width: 40%;
+    margin: 0 auto 20px auto;
+    line-height: 140%;
+  }
+  .leaderboard table {
+    background: pink;
+    width: 100%;
+    margin: 0 auto 35px auto;
+    font-size: 140%;
+  }
+  .leaderboard table thead tr {
+    height: 30px;
+  }
+  .leaderboard table thead tr th:first-child {
+    width: 15%;
+  }
+  .leaderboard table thead tr th:nth-child(2) {
+    width: 50%;
+  }
+  .leaderboard table thead tr th:last-child {
+    width: 35%;
+  }
+  .leaderboard table tbody tr {
+    height: 25px;
+  }
+  .leaderboard #exclude-exchanges {
+    margin: 0 auto 25px auto;
+    font-size: 90%;
+  }
+  .leaderboard .details {
+    width: 50%;
+    margin: 0 auto 25px auto;
+    color: #999;
+    font-size: 90%;
+    line-height: 140%;
+  }
+}
+footer {
+  margin-bottom: 100px;
+}
+footer .game-over {
+  width: 50%;
+  margin: 70px auto;
+  font-family: "Karmatic Arcade";
+  font-size: 400%;
+  color: yellow;
+}
+footer .credits {
+  margin-bottom: 100px;
+  color: #999;
+}
+footer .credits h5 {
+  width: 50%;
+  margin: 0 auto 25px auto;
+  font-size: 150%;
+}
+footer .credits p {
+  line-height: 160%;
+}
+footer .credits p a {
+  color: inherit;
+  text-decoration: none;
+}
+footer .credits p a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.starfield {
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 200px 200px;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: "Arcade";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .container {
+    font-size: 80%;
+  }
+}
+@media (max-width: 812px) {
+  .container {
+    font-size: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    font-size: 80%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
