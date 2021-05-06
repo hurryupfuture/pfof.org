@@ -21,31 +21,26 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
-// S
-@media (max-width: breakpoints.$small) {
-  .container {
-    font-size: 80%;
-  }
-}
 
-// M 
-@media (max-width: breakpoints.$medium) {
-  .container {
-    font-size: 80%;
-  }
-}
-
-// L
-@media (max-width: breakpoints.$large) {
-  .container {
-    //width: breakpoints.$medium;
-    font-size: 80%;
-  }
-}
-// XL
 @media (min-width: breakpoints.$large) {
   .container {
-    //width: breakpoints.$xlarge;
-    font-size: 80%;
+    width: breakpoints.$large;
+  }
+}
+@media (max-width: breakpoints.$large) {
+  .container {
+    width: breakpoints.$large;
+  }
+}
+@media (max-width: breakpoints.$medium) {
+  .container {
+    width: 800px;
+    font-size: 50%;
+  }
+}
+@media (max-width: breakpoints.$small) {
+  .container {
+    width: 100%;
+    font-size: 40%;
   }
 }
