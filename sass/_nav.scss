@@ -1,0 +1,50 @@
+
+@use 'breakpoints';
+@use 'type';
+@use 'colors';
+
+nav {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 25px 0;  
+    
+    #player-1, #player-2 {
+        position: absolute;
+        padding: 5px;
+        font-size: 78%;
+        color: colors.$lowlight;
+
+        &.active, &:hover {
+            background: colors.$secondary; 
+            color: colors.$fg;
+        }
+    }
+    #player-1 { left: 25px; }
+    #player-2 { text-align: right; right: 25px; }
+    
+    #insert-coin {
+        position: absolute;
+        top: 2px;
+        left: 43%;
+        font-size: 120%;
+        animation: blinky 2.0s infinite;
+    }
+
+    @keyframes blinky {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 1.0
+        }
+        51% {
+            opacity: 0.0
+        }
+        100% {
+            opacity: 0.0;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+
+@use 'breakpoints';
+@use 'type';
+@use 'colors';
+
+.leaderboard {
+
+    margin-bottom: 40px;
+
+    .winner {
+
+        margin: 0 auto 50px auto;
+        font-size: 100%;
+
+        h3 {
+            margin-bottom: 25px;
+            font-family: type.$headline-font;
+            font-size: 300%;
+            line-height: 140%;
+        }
+
+        p {
+            width: 40%;
+            margin: 0 auto 20px auto;
+            color: colors.$fg;
+            line-height: 140%;
+        } 
+    }
+
+    table {
+
+        &#retail-brokers { display: table; }
+        &#retail-brokers-ex-exchanges { display: table; }
+        &#market-makers { display: table; color: colors.$fg; }
+
+        width: 100%;
+        margin: 0 auto 35px auto;
+        font-size: 215%;
+
+        thead {
+            
+            color: colors.$secondary;
+            
+            tr {
+                height: 50px;
+                th:first-child {
+                    width: 15%;
+                    text-align: center;
+                }
+                th:nth-child(2) {
+                    width: 50%;
+                    text-align: left;
+                }
+                th:last-child {
+                    width: 35%;
+                    text-align: right;
+                }
+            }
+        }
+        tbody {
+
+            tr {
+                height: 36px;
+
+                td:first-child {
+                    text-align: center;
+                    color: colors.$secondary;
+                }
+                td:nth-child(2) {
+                    text-align: left;
+                }
+                td:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    #exclude-exchanges {
+        margin: 0 auto 25px auto;
+        font-size: 110%;
+        line-height: 140%;
+    }
+
+    .details {
+        width: 50%;
+        margin: 0 auto 25px auto;
+        color: colors.$lowlight;
+        font-size: 90%;
+        line-height: 140%;
+    }
+}
+
+@media (max-width: breakpoints.$medium) {
+   
+    .leaderboard {
+            
+        margin-bottom: 30px;
+
+        .winner {
+
+            margin: 0 auto 25px auto;
+            font-size: 100%;
+
+            h3 {
+                margin-bottom: 25px;
+                font-size: 260%;
+                line-height: 140%;
+            }
+
+            p {
+                width: 40%;
+                margin: 0 auto 20px auto;
+                line-height: 140%;
+            } 
+        }
+
+        table {
+
+            background: pink;
+            width: 100%;
+            margin: 0 auto 35px auto;
+            font-size: 140%;
+    
+            thead {
+                
+                tr {
+                    height: 30px;
+                    th:first-child {
+                        width: 15%;
+                    }
+                    th:nth-child(2) {
+                        width: 50%;
+                    }
+                    th:last-child {
+                        width: 35%;
+                    }
+                }
+            }
+            tbody {
+    
+                tr {
+                    height: 25px;
+                }
+            }
+        }
+    
+        #exclude-exchanges {
+            margin: 0 auto 25px auto;
+            font-size: 90%;
+        }
+    
+        .details {
+            width: 50%;
+            margin: 0 auto 25px auto;
+            color: colors.$lowlight;
+            font-size: 90%;
+            line-height: 140%;
+        }
+    }
+}
+
+
+
+
+  
+  
