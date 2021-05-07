@@ -8,7 +8,6 @@ footer {
     margin-bottom: 100px;
 
     .game-over {
-        width: 50%;
         margin: 70px auto;
         font-family: type.$headline-font;
         font-size: 400%;
@@ -16,7 +15,8 @@ footer {
     }
         
     .credits {
-        margin-bottom: 100px;
+
+        margin-bottom: 50px;
         color: colors.$lowlight;
 
         h5 {
@@ -32,5 +32,13 @@ footer {
                 &:hover { color: colors.$fg; text-decoration: none; }
             }
         }
+    }
+
+    .social {
+        margin-bottom: 30px;
+    }
+
+    .tips {
+        
     }
 }

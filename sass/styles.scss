@@ -21,26 +21,41 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
-
-@media (min-width: breakpoints.$large) {
+// JUMBO
+@media (min-width: breakpoints.$xlarge) {
   .container {
     width: breakpoints.$large;
+    padding: 20px;
   }
 }
+
+// XL
+@media (min-width: breakpoints.$xlarge) {
+  .container {
+    width: breakpoints.$xlarge;
+    padding: 20px;
+  }
+}
+
+// L
 @media (max-width: breakpoints.$large) {
   .container {
-    width: breakpoints.$large;
+    width: 100%;
   }
 }
+
+// M
 @media (max-width: breakpoints.$medium) {
   .container {
-    width: 800px;
+    width: 100%;
     font-size: 50%;
   }
 }
+
+// S
 @media (max-width: breakpoints.$small) {
   .container {
     width: 100%;
-    font-size: 40%;
+    font-size: 30%;
   }
 }

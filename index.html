@@ -19,9 +19,13 @@
 <body class="starfield">
 
 <nav>
-    <div id="player-1" v-on:click="select" v-bind:class="[isActive ? 'active' : 'inactive']">[{{ flag }}] Player 1: Retail Brokers</div>
+    <div id="player-1" v-on:click="select" v-bind:class="[isActive ? 'active' : 'inactive']">
+        [{{ flag }}] Player 1: Retail Brokers
+    </div>
     <div id="insert-coin">Insert Coin</div>
-    <div id="player-2" v-on:click="select" v-bind:class="[isActive ? 'active' : 'inactive']">[{{ flag }}] Player 2: Market Makers</div>
+    <div id="player-2" v-on:click="select" v-bind:class="[isActive ? 'active' : 'inactive']">
+        [{{ flag }}] Player 2: Market Makers
+    </div>
 </nav>
 
 <div class="container">
@@ -213,8 +217,11 @@
     </table>
 
     <section id="exclude-exchanges" v-if="isVisible">
-        <p v-on:click="toggle">
-            [{{ flag }}] Exclude payments from exchanges*
+        <h4 v-on:click="toggle">
+            [{{ flag }}] Exclude payments from exchanges:
+        </h4>
+        <p>
+            NYSE, NYSE ARCA, NASDAQ, CBOE EDGX, CBOE BYX, IEX, MEMX
         </p>
     </section>
 
@@ -223,13 +230,13 @@
             Net payment paid/received for Q1 2021
         </p>
         <p>
-            S&P 500 and non-S&P 500 Stocks. All Order Types
+            S&P 500 and non-S&P 500 Stocks
+        </p>
+        <p>
+            All Order Types
         </p>
         <p>
             Options not included
-        </p>
-        <p>
-            * NYSE, NYSE ARCA, NASDAQ, CBOE, MEMX
         </p>
     </section>
 
@@ -251,8 +258,12 @@
         <p><a href="https://www.tdameritrade.com/disclosure.html" target="_blank">TD Ameritrade</a></p>
     </section>
 
+    <section class="social">
+        <a href="https://twitter.com/PFOFChamps" target="_blank">@PFOFChamps</a>
+    </section>
+
     <section class="tips">
-        [_] Bitcoin | ETH/ERC-20 [_] 
+        BTC | ETH
     </section>
      
 </footer>

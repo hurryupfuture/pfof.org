@@ -46,34 +46,32 @@ body, h1, h2, h3, h4, h5, p {
 
 nav {
   position: relative;
-  height: 1px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 25px 0;
+  height: 30px;
 }
 nav #player-1, nav #player-2 {
   position: absolute;
-  padding: 5px;
-  font-size: 78%;
+  margin: 15px;
+  font-size: 100%;
   color: #999;
 }
 nav #player-1.active, nav #player-1:hover, nav #player-2.active, nav #player-2:hover {
-  background: magenta;
-  color: #fff;
+  color: magenta;
+}
+nav #player-1:hover, nav #player-2:hover {
+  cursor: pointer;
 }
 nav #player-1 {
-  left: 25px;
+  left: 5px;
 }
 nav #player-2 {
+  right: 5px;
   text-align: right;
-  right: 25px;
 }
 nav #insert-coin {
   position: absolute;
-  top: 2px;
-  left: 43%;
-  font-size: 120%;
+  top: 15px;
+  left: 42%;
+  font-size: 140%;
   animation: blinky 2s infinite;
 }
 @keyframes blinky {
@@ -91,6 +89,34 @@ nav #insert-coin {
   }
 }
 
+@media (max-width: 1024px) {
+  nav {
+    font-size: 65%;
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    font-size: 55%;
+  }
+}
+@media (max-width: 414px) {
+  nav {
+    position: relative;
+  }
+  nav #player-1, nav #player-2 {
+    position: relative;
+    margin: 15px;
+  }
+  nav #player-1 {
+    text-align: left;
+  }
+  nav #player-2 {
+    text-align: left;
+  }
+  nav #insert-coin {
+    display: none;
+  }
+}
 header {
   margin: 100px 0 0 0;
   font-family: "Karmatic Arcade";
@@ -98,7 +124,7 @@ header {
 header h1 {
   margin-bottom: 35px;
   color: yellow;
-  font-size: 600%;
+  font-size: 500%;
 }
 header h1 .p1 {
   color: red;
@@ -112,30 +138,23 @@ header h1 .p3 {
 header h1 .p4 {
   color: blue;
 }
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 550%;
+  }
+}
 header h2 {
   margin-bottom: 60px;
   color: magenta;
   font-size: 200%;
 }
 
-@media (max-width: 800px) {
-  header {
-    margin: 100px 0 0 0;
-  }
-  header h1 {
-    margin-bottom: 30px;
-    font-size: 360%;
-  }
-  header h2 {
-    margin-bottom: 40px;
-    font-size: 160%;
-  }
-}
 .leaderboard {
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
+  width: 92%;
 }
 .leaderboard .winner {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 40px auto;
   font-size: 100%;
 }
 .leaderboard .winner h3 {
@@ -146,14 +165,14 @@ header h2 {
 }
 .leaderboard .winner p {
   width: 40%;
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
   color: #fff;
   line-height: 140%;
 }
 .leaderboard table {
   width: 100%;
-  margin: 0 auto 35px auto;
-  font-size: 215%;
+  margin: 0 auto 40px auto;
+  font-size: 190%;
 }
 .leaderboard table#retail-brokers {
   display: table;
@@ -172,55 +191,67 @@ header h2 {
   height: 50px;
 }
 .leaderboard table thead tr th:first-child {
-  width: 15%;
+  width: 10%;
   text-align: center;
 }
 .leaderboard table thead tr th:nth-child(2) {
   width: 50%;
+  padding-left: 30px;
   text-align: left;
 }
 .leaderboard table thead tr th:last-child {
-  width: 35%;
+  width: 40%;
   text-align: right;
 }
 .leaderboard table tbody tr {
-  height: 36px;
+  height: 50px;
 }
 .leaderboard table tbody tr td:first-child {
   text-align: center;
   color: magenta;
 }
 .leaderboard table tbody tr td:nth-child(2) {
+  padding-left: 30px;
   text-align: left;
 }
 .leaderboard table tbody tr td:last-child {
   text-align: right;
 }
+@media (max-width: 800px) {
+  .leaderboard table tbody tr {
+    height: 25px;
+  }
+}
 .leaderboard #exclude-exchanges {
-  margin: 0 auto 25px auto;
+  margin: 0 auto 40px auto;
   font-size: 110%;
   line-height: 140%;
 }
+.leaderboard #exclude-exchanges h4 {
+  margin: 0 auto 10px auto;
+  font-size: 120%;
+}
+.leaderboard #exclude-exchanges h4:hover {
+  cursor: pointer;
+}
 .leaderboard .details {
-  width: 50%;
   margin: 0 auto 25px auto;
   color: #999;
-  font-size: 90%;
-  line-height: 140%;
+  font-size: 80%;
+  line-height: 160%;
 }
 
 footer {
   margin-bottom: 100px;
 }
 footer .game-over {
-  width: 50%;
   margin: 70px auto;
   font-family: "Karmatic Arcade";
   font-size: 400%;
   color: yellow;
 }
 footer .credits {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: #999;
 }
 footer .credits h5 {
@@ -239,7 +270,9 @@ footer .credits p a:hover {
   color: #fff;
   text-decoration: none;
 }
-
+footer .social {
+  margin-bottom: 30px;
+}
 .starfield {
   background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
   background-repeat: repeat;
@@ -265,24 +298,31 @@ a {
 
 @media (min-width: 1366px) {
   .container {
-    width: 1366px;
+    width: 1024px;
+    padding: 20px;
   }
 }
-@media (max-width: 1366px) {
+@media (min-width: 1366px) {
   .container {
     width: 1366px;
+    padding: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
   }
 }
 @media (max-width: 800px) {
   .container {
-    width: 800px;
+    width: 100%;
     font-size: 50%;
   }
 }
 @media (max-width: 414px) {
   .container {
     width: 100%;
-    font-size: 40%;
+    font-size: 30%;
   }
 }
 

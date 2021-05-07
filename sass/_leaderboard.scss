@@ -5,11 +5,12 @@
 
 .leaderboard {
 
-    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
+    width: 92%;
 
     .winner {
 
-        margin: 0 auto 50px auto;
+        margin: 0 auto 40px auto;
         font-size: 100%;
 
         h3 {
@@ -21,7 +22,7 @@
 
         p {
             width: 40%;
-            margin: 0 auto 20px auto;
+            margin: 0 auto;
             color: colors.$fg;
             line-height: 140%;
         } 
@@ -34,8 +35,8 @@
         &#market-makers { display: table; color: colors.$fg; }
 
         width: 100%;
-        margin: 0 auto 35px auto;
-        font-size: 215%;
+        margin: 0 auto 40px auto;
+        font-size: 190%;
 
         thead {
             
@@ -44,15 +45,16 @@
             tr {
                 height: 50px;
                 th:first-child {
-                    width: 15%;
+                    width: 10%;
                     text-align: center;
                 }
                 th:nth-child(2) {
                     width: 50%;
+                    padding-left: 30px;
                     text-align: left;
                 }
                 th:last-child {
-                    width: 35%;
+                    width: 40%;
                     text-align: right;
                 }
             }
@@ -60,13 +62,14 @@
         tbody {
 
             tr {
-                height: 36px;
+                height: 50px;
 
                 td:first-child {
                     text-align: center;
                     color: colors.$secondary;
                 }
                 td:nth-child(2) {
+                    padding-left: 30px;
                     text-align: left;
                 }
                 td:last-child {
@@ -74,19 +77,36 @@
                 }
             }
         }
+
+        @media (max-width: breakpoints.$medium) {
+            tbody {
+                tr {
+                    height: 25px;
+                }
+            }
+        }
     }
 
     #exclude-exchanges {
-        margin: 0 auto 25px auto;
+
+        margin: 0 auto 40px auto;
         font-size: 110%;
         line-height: 140%;
+
+        h4 {
+            margin: 0 auto 10px auto;
+            font-size: 120%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }     
     }
 
     .details {
-        width: 50%;
         margin: 0 auto 25px auto;
         color: colors.$lowlight;
-        font-size: 90%;
-        line-height: 140%;
+        font-size: 80%;
+        line-height: 160%;
     }
 }

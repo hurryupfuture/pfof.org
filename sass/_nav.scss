@@ -4,32 +4,35 @@
 @use 'colors';
 
 nav {
+
     position: relative;
-    height: 1px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    margin: 25px 0;  
+    height: 30px;
     
     #player-1, #player-2 {
         position: absolute;
-        padding: 5px;
-        font-size: 78%;
+        margin: 15px;
+        font-size: 100%;
         color: colors.$lowlight;
 
         &.active, &:hover {
-            background: colors.$secondary; 
-            color: colors.$fg;
+            color: colors.$secondary;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
-    #player-1 { left: 25px; }
-    #player-2 { text-align: right; right: 25px; }
+    #player-1 { left: 5px; }
+    #player-2 {
+        right: 5px;
+        text-align: right; 
+    }
     
     #insert-coin {
         position: absolute;
-        top: 2px;
-        left: 43%;
-        font-size: 120%;
+        top: 15px;
+        left: 42%;
+        font-size: 140%;
         animation: blinky 2.0s infinite;
     }
 
@@ -45,6 +48,39 @@ nav {
         }
         100% {
             opacity: 0.0;
+        }
+    }
+}
+
+@media (max-width: breakpoints.$large) {
+    nav {
+        font-size: 65%;
+    }
+}
+
+@media (max-width: breakpoints.$medium) {
+    nav {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: breakpoints.$small) {
+    nav {
+        position: relative;
+
+        #player-1, #player-2 {
+            position: relative;
+            margin: 15px;
+        }
+        #player-1 {
+            text-align: left; 
+        }
+        #player-2 {
+            text-align: left; 
+        }
+
+        #insert-coin {
+            display: none;
         }
     }
 }

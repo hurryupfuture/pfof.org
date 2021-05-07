@@ -11,12 +11,18 @@ header {
     h1 {
         margin-bottom: 35px;
         color: colors.$primary;
-        font-size: 600%;
+        font-size: 500%;
 
         .p1 { color: colors.$accent-1; }
         .p2 { color: colors.$accent-2; }
         .p3 { color: colors.$accent-3; }
-        .p4 { color: colors.$accent-4; }
+        .p4 { color: colors.$accent-4; }  
+    }
+    
+    @media (max-width: breakpoints.$medium) {
+        h1 {
+            font-size: 550%;
+        }
     }
 
     h2 {
@@ -24,19 +30,4 @@ header {
         color: colors.$secondary;
         font-size: 200%;
     }
-}
-
-@media (max-width: breakpoints.$medium) {
-    
-    header {
-        margin: 100px 0 0 0;
-        h1 {
-            margin-bottom: 30px;
-            font-size: 360%;
-        }
-        h2 {
-            margin-bottom: 40px;
-            font-size: 160%;
-        }
-    } 
 }
