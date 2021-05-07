@@ -4,23 +4,50 @@ $fg: #fff;
 $lowlight: #999;
 
 $primary: yellow;
-$secondary: magenta;
 
 $accent-1 :red;
 $accent-2 :orange;
 $accent-3 :green;
 $accent-4 :blue;
+$accent-5: magenta;
 
 $charles-schwab:  #04a0de;
-$e-trade:  #5627d8;
+$e-trade:  #6633cc;
 $fidelity:  #568200;
 $interactive-brokers:  #da1322;
 $robinhood:  #5ac33a;
 $td-ameritrade:  #40a829;
+$exchange: #14578d;
 
-.charles-schwab { color: $charles-schwab; }
-.e-trade { color: $e-trade; }
-.fidelity { color: $fidelity; }
-.interactive-brokers { color: $interactive-brokers; }
-.robinhood { color: $robinhood; }
-.td-ameritrade { color: $td-ameritrade; }
+$glow-opacity: 0.5;
+$glow-blur: 10px;
+
+.charles-schwab {
+    color: $charles-schwab; 
+    text-shadow: rgba($charles-schwab, $glow-opacity) 0px 0px $glow-blur;
+}
+.e-trade {
+    color: $e-trade;
+    text-shadow: rgba($e-trade, $glow-opacity) 0px 0px $glow-blur;
+}
+.fidelity {
+    color: $fidelity;
+    text-shadow: rgba($fidelity, $glow-opacity) 0px 0px $glow-blur;
+}
+.interactive-brokers {
+    color: $interactive-brokers;
+    text-shadow: rgba($interactive-brokers, $glow-opacity) 0px 0px $glow-blur;
+}
+.robinhood { 
+    color: $robinhood;
+    text-shadow: rgba($robinhood, $glow-opacity) 0px 0px $glow-blur;
+}
+.td-ameritrade {
+    color: $td-ameritrade;
+    text-shadow: rgba($td-ameritrade, $glow-opacity) 0px 0px $glow-blur;
+}
+.exchange {
+    color: $exchange;
+    text-shadow: rgba($exchange, $glow-opacity) 0px 0px $glow-blur;
+}
+

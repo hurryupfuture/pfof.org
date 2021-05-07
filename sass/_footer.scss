@@ -5,23 +5,25 @@
 
 footer {
 
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     .game-over {
-        margin: 70px auto;
+        margin-bottom: 50px;
         font-family: type.$headline-font;
-        font-size: 400%;
+        font-size: 300%;
         color: colors.$primary;
+        text-shadow: rgba(colors.$primary, colors.$glow-opacity) 0px 0px colors.$glow-blur;
     }
         
     .credits {
 
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         color: colors.$lowlight;
+        text-shadow: rgba(colors.$lowlight, colors.$glow-opacity) 0px 0px colors.$glow-blur;
 
         h5 {
             width: 50%;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 15px auto;
             font-size: 150%;
         }
 
@@ -36,9 +38,31 @@ footer {
 
     .social {
         margin-bottom: 30px;
+        text-shadow: rgba(colors.$fg, colors.$glow-opacity) 0px 0px colors.$glow-blur;
     }
 
     .tips {
-        
+        text-shadow: rgba(colors.$fg, colors.$glow-opacity) 0px 0px colors.$glow-blur;
+    }
+}
+
+@media (max-width: breakpoints.$small) {
+    footer {
+
+        margin-bottom: 50px;
+
+        .game-over {
+            margin-bottom: 30px;
+            font-size: 160%;
+        }
+
+        .credits {
+            h5 {
+                font-size: 120%;
+            }
+            p {
+                font-size: 80%;
+            }
+        }
     }
 }

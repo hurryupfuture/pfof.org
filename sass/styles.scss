@@ -5,6 +5,7 @@
 @use 'colors';
 @use 'nav';
 @use 'header';
+@use 'winner';
 @use 'leaderboard';
 @use 'footer';
 @use 'effects';
@@ -40,7 +41,8 @@ a { color: inherit; text-decoration: none; }
 // L
 @media (max-width: breakpoints.$large) {
   .container {
-    width: 100%;
+    width: 90%;
+    font-size: 100%;
   }
 }
 
@@ -48,7 +50,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: breakpoints.$medium) {
   .container {
     width: 100%;
-    font-size: 50%;
+    font-size: 80%;
   }
 }
 
@@ -56,6 +58,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: breakpoints.$small) {
   .container {
     width: 100%;
-    font-size: 30%;
+    font-size: 70%;
   }
 }

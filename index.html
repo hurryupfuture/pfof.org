@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="starfield">
+<body class="starfield crt">
 
 <nav>
     <div id="player-1" v-on:click="select" v-bind:class="[isActive ? 'active' : 'inactive']">
@@ -35,22 +35,24 @@
     <h2>Payment for Order Flow</h2>
 </header>
 
-<section class="leaderboard">
+<section class="winner">
+    <h3 class="td-ameritrade">Congratulations TD Ameritrade!!!</h3>
+    <p>
+        You made the most money selling 
+        your customers' orders to 
+        high&nbsp;frequency trading firms! 
+    </p>
+</section>
 
-    <section class="winner">
-        <h3 class="td-ameritrade">Congratulations TD Ameritrade!!!</h3>
-        <p>
-            You made the most money selling 
-            your customers' orders to 
-            high frequency traders and hedge funds! 
-        </p>
-    </section>
+<section class="leaderboard">
 
     <table id="retail-brokers" v-if="isVisible">
         <thead>
             <th class="rank">Rank</th>
             <th class="name">Name</th>
-            <th class="net-payments">Net Received Q1</th>
+            <th class="net-payments">
+                <span class="full">Net Received Q1</span><span class="trunc">Net Rec Q1</span>
+            </th>
         </thead>
         <tbody>
             <tr class="td-ameritrade">
@@ -60,7 +62,7 @@
             </tr>
             <tr class="robinhood">
                 <td>2.</td>
-                <td><a href="https://robinhood.com/" target="_blank">Robinhood</a></td>
+                <td>Robinhood</td>
                 <td>$133,133,153</td>
             </tr>
             <tr class="e-trade">
@@ -70,7 +72,9 @@
             </tr>
             <tr class="charles-schwab">
                 <td>4.</td>
-                <td>Charles Schwab</td>
+                <td>
+                    <span class="full">Charles Schwab</span><span class="trunc">Schwab</span>
+                </td>
                 <td>$33,762,659</td>
             </tr>
             <tr class="fidelity">
@@ -80,7 +84,9 @@
             </tr>
             <tr class="interactive-brokers">
                 <td>6.</td>
-                <td>Interactive Brokers</td>
+                <td>
+                    <span class="full">Interactive Brokers</span><span class="trunc">Int. Brokers</span>
+                </td>
                 <td>$14,200,741</td>
             </tr>
         </tbody>
@@ -90,7 +96,9 @@
         <thead>
             <th class="rank">Rank</th>
             <th class="name">Name</th>
-            <th class="net-payments">Net Received Q1</th>
+            <th class="net-payments">
+                <span class="full">Net Received Q1</span><span class="trunc">Net Rec Q1</span>
+            </th>
         </thead>
         <tbody>
             <tr class="td-ameritrade">
@@ -110,12 +118,16 @@
             </tr>
             <tr class="charles-schwab">
                 <td>4.</td>
-                <td>Charles Schwab</td>
+                <td>
+                    <span class="full">Charles Schwab</span><span class="trunc">Schwab</span>
+                </td>
                 <td>$33,523,021</td>
             </tr>
             <tr class="interactive-brokers">
                 <td>5.</td>
-                <td>Interactive Brokers</td>
+                <td>
+                    <span class="full">Interactive Brokers</span><span class="trunc">Int. Brokers</span>
+                </td>
                 <td>$1,051,497</td>
             </tr>
             <tr class="fidelity">
@@ -130,7 +142,7 @@
         <thead>
             <th class="rank">Rank</th>
             <th class="name">Name</th>
-            <th class="net-payments">Net Received Q1</th>
+            <th class="net-payments">Net Paid Q1</th>
         </thead>
         <tbody class="market-makers">
             <tr class="citadel">
@@ -180,7 +192,9 @@
             </tr>
             <tr class="jane-street-capital">
                 <td>10.</td>
-                <td>Jane Street Capital</td>
+                <td>
+                    <span class="full">Jane Street Capital</span><span class="trunc">Jane Street Cap.</span>
+                </td>
                 <td>$179,900</td>
             </tr>
             <tr class="cboe-byx exchange">
@@ -190,7 +204,9 @@
             </tr>
             <tr class="national-financial-services">
                 <td>12.</td>
-                <td>Nat'l Fin. Svcs. </td>
+                <td>
+                    <span class="full">National Fin. Svcs.</span><span class="trunc">Nat'l Fin. Svcs.</span>
+                </td>
                 <td>$0</td>
             </tr>
             <tr class="ibkr-ats">
@@ -220,14 +236,14 @@
         <h4 v-on:click="toggle">
             [{{ flag }}] Exclude payments from exchanges:
         </h4>
-        <p>
+        <p class="exchange">
             NYSE, NYSE ARCA, NASDAQ, CBOE EDGX, CBOE BYX, IEX, MEMX
         </p>
     </section>
 
     <section class="details">
         <p>
-            Net payment paid/received for Q1 2021
+            Net paid/received for Q1 2021
         </p>
         <p>
             S&P 500 and non-S&P 500 Stocks
@@ -259,12 +275,6 @@
     </section>
 
     <section class="social">
-        <a href="https://twitter.com/PFOFChamps" target="_blank">@PFOFChamps</a>
-    </section>
-
-    <section class="tips">
-        BTC | ETH
-    </section>
      
 </footer>
 

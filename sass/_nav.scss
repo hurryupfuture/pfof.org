@@ -13,9 +13,11 @@ nav {
         margin: 15px;
         font-size: 100%;
         color: colors.$lowlight;
+        text-shadow: rgba(colors.$lowlight, colors.$glow-opacity) 0px 0px colors.$glow-blur;
 
         &.active, &:hover {
-            color: colors.$secondary;
+            color: colors.$accent-1;
+            text-shadow: rgba(colors.$accent-1, colors.$glow-opacity) 0px 0px colors.$glow-blur;
         }
 
         &:hover {
@@ -31,8 +33,9 @@ nav {
     #insert-coin {
         position: absolute;
         top: 15px;
-        left: 42%;
+        left: 41%;
         font-size: 140%;
+        text-shadow: rgba(colors.$fg, colors.$glow-opacity) 0px 0px colors.$glow-blur;
         animation: blinky 2.0s infinite;
     }
 
@@ -61,22 +64,19 @@ nav {
 @media (max-width: breakpoints.$medium) {
     nav {
         font-size: 55%;
+
+        #insert-coin {
+            display: none;
+        }
     }
 }
 
 @media (max-width: breakpoints.$small) {
     nav {
-        position: relative;
 
-        #player-1, #player-2 {
-            position: relative;
-            margin: 15px;
-        }
-        #player-1 {
-            text-align: left; 
-        }
         #player-2 {
-            text-align: left; 
+            left: 5px;
+            top: 15px;
         }
 
         #insert-coin {
