@@ -3,12 +3,12 @@
 @use 'breakpoints';
 @use 'type';
 @use 'colors';
+@use 'effects';
 @use 'nav';
 @use 'header';
 @use 'winner';
 @use 'leaderboard';
 @use 'footer';
-@use 'effects';
 
 body {
   background-color: colors.$bg;

@@ -46,6 +46,10 @@ $glow-blur: 10px;
     color: $td-ameritrade;
     text-shadow: rgba($td-ameritrade, $glow-opacity) 0px 0px $glow-blur;
 }
+.market-maker {
+  color: $accent-5;
+  text-shadow: rgba($accent-5, $glow-opacity) 0px 0px $glow-blur;
+}
 .exchange {
     color: $exchange;
     text-shadow: rgba($exchange, $glow-opacity) 0px 0px $glow-blur;

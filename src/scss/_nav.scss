@@ -1,6 +1,5 @@
 
 @use 'breakpoints';
-@use 'type';
 @use 'colors';
 
 nav {
@@ -36,6 +35,7 @@ nav {
         left: 41%;
         font-size: 140%;
         text-shadow: rgba(colors.$fg, colors.$glow-opacity) 0px 0px colors.$glow-blur;
+        cursor: pointer;
         animation: blinky 2.0s infinite;
     }
 

@@ -1,0 +1,19 @@
+
+$body-font: 'Arcade';
+$headline-font: 'Karmatic Arcade';
+
+@font-face {
+    font-family: 'Arcade';
+    src: url('assets/arcade_n-webfont.woff2') format('woff2'),
+            url('assets/arcade_n-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karmatic Arcade';
+    src: url('assets/ka-webfont.woff2') format('woff2'),
+            url('assets/ka-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
